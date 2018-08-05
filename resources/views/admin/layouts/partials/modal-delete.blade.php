@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                Do you want to delete ?
+                Do you want to delete : {{$name}} ? 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancle</button>

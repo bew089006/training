@@ -1,22 +1,17 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use App\Model\Product as ProductMod
-
-class PhotoController extends Controller
+use App\Http\Controllers\Controller;
+use App\Model\Product as ProductMod;
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-
      */
-
-    
-
-
     public function index()
     {
         
@@ -36,7 +31,6 @@ class PhotoController extends Controller
     public function create()
     {
         //
-        return "mnosaiya";
     }
 
     /**
@@ -47,9 +41,7 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        
-        return "naja123";
-
+        //
     }
 
     /**
@@ -60,7 +52,7 @@ class PhotoController extends Controller
      */
     public function show($id)
     {
-        return "eieieieieiei ==== ".$id."";
+        //
     }
 
     /**
@@ -71,7 +63,7 @@ class PhotoController extends Controller
      */
     public function edit($id)
     {
-        return "editkaree ==== ".$id."";
+        //
     }
 
     /**
@@ -83,13 +75,7 @@ class PhotoController extends Controller
      */
     public function update(Request $request, $id)
     {
-            dd($request);
-
-
-            return "monkungnaja";
-
-
-
+        //
     }
 
     /**
@@ -102,6 +88,4 @@ class PhotoController extends Controller
     {
         //
     }
-
-
 }

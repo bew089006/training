@@ -15,7 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::resource('photos', 'PhotoController');
-
-Route::resource('admin/users', 'Admin\UsersController');
 Route::get('demoone', 'DemoController@index');
+//Route::resource('admin/users', 'Admin\UsersController');
+
+
+Route::prefix('admin')->middleware('auth')->group(function () {
+	Route::resource('users', 'Admin\UsersController');
+// Route::get('logout', 'LoginController@logout');
+// Route::post('login', 'LoginController@authenticate');
+
+});
+	Route::get('login', 'LoginController@index')->name('login');
+	Route::get('logout', 'LoginController@logout');
+	Route::post('login', 'LoginController@authenticate');
+
+Route::get('/testlinenoti', 'DemoController@testlinenoti');
+Route::get('/testexcel', 'DemoController@testexcel');
+
 
